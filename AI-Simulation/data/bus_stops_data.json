@@ -1,0 +1,102 @@
+
+[
+  {
+    "id": "0",
+    "municipality":"Centro Habana",
+    "x":1,
+    "y":2
+  },
+  {
+    "id": "1",
+    "municipality":"Plaza",
+    "x":2,
+    "y":3
+  },
+  {
+    "id": "2",
+    "municipality":"Playa",
+    "x":4,
+    "y":5
+  },
+  {
+    "id": "3",
+    "municipality":"Cerro",
+    "x" : 6,
+    "y" : 7
+  },
+  {
+    "id": "4",
+    "municipality":"10 Octubre",
+    "x" : 8,
+    "y" : 9
+  },
+  {
+    "id": "5",
+    "municipality":"Boyeros",
+    "x" : 3,
+    "y" : 6
+
+  },
+  {
+    "id": "6",
+    "municipality":"Arroyo Naranjo",
+    "x" : 5,
+    "y" : 8
+
+  },
+  {
+    "id": "7",
+    "municipality":"Cotorro",
+    "x" : 7,
+    "y" : 10
+  },
+  {
+    "id": "8",
+    "municipality":"La Lisa",
+    "x" : 2,
+    "y" : 2
+
+  },
+  {
+    "id": "9",
+    "municipality":"Habana del Este",
+    "x" : 4,
+    "y" : 4
+
+  },
+  {
+    "id": "10",
+    "municipality":"Habana Vieja",
+    "x" : 6,
+    "y" : 6
+    
+  },
+  {
+    "id": "11",
+    "municipality":"Guanabacoa",
+    "x" : 8,
+    "y" : 8
+
+  },
+  {
+    "id": "12",
+    "municipality":"Regla",
+    "x" : 1,
+    "y" : 3
+
+  },
+  {
+    "id": "13",
+    "municipality":"San Miguel del Padrón",
+    "x" : 3,
+    "y" : 5
+
+  },
+  {
+    "id": "14",
+    "municipality":"Marianao",
+    "x" : 5,
+    "y" : 7
+
+  }
+]

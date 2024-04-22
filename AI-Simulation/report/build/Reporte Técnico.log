@@ -1,0 +1,166 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.27)  21 APR 2024 23:43
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"/home/diani/Diani/Proyectos/4to/Proyecto Simulación-IA/AI-Simulation/report/Reporte Técnico.tex"
+(/home/diani/Diani/Proyectos/4to/Proyecto Simulación-IA/AI-Simulation/report/Reporte Técnico.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen139
+\Gin@req@width=\dimen140
+) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count193
+\l__pdf_internal_box=\box50
+) (build/Reporte Técnico.aux)
+\openout1 = `"Reporte Técnico.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count194
+\scratchdimen=\dimen141
+\scratchbox=\box51
+\nofMPsegments=\count195
+\nofMParguments=\count196
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count197
+\MPscratchDim=\dimen142
+\MPnumerator=\count198
+\makeMPintoPDFobject=\count199
+\everyMPtoPDFconversion=\toks20
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+)) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1] [2] [3]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 58.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 58.
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 92--94
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 124--126
+
+ []
+
+[6]
+Overfull \hbox (17.24324pt too wide) in paragraph at lines 136--138
+\OT1/cmr/m/n/10 Para la im-ple-mentaci^^Son del Am-bi-ente se im-ple-ment^^So una clase lla-mada $\OML/cmm/m/it/10 Enviroment$\OT1/cmr/m/n/10 . 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--138
+
+ []
+
+
+Overfull \hbox (0.8577pt too wide) in paragraph at lines 148--150
+\OT1/cmr/m/n/10 Para el dise~no de los medios de trans-porte se im-ple-ment^^So la clase $\OML/cmm/m/it/10 Transportation$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--150
+
+ []
+
+[7]
+<buses.png, id=35, 175.40532pt x 267.24844pt>
+File: buses.png Graphic file (type png)
+<use buses.png>
+Package pdftex.def Info: buses.png  used on input line 180.
+(pdftex.def)             Requested size: 175.40488pt x 267.24779pt.
+ [8] [9 <./buses.png (PNG copy)>]
+<m1.png, id=42, 201.00093pt x 370.38374pt>
+File: m1.png Graphic file (type png)
+<use m1.png>
+Package pdftex.def Info: m1.png  used on input line 184.
+(pdftex.def)             Requested size: 201.00043pt x 370.38283pt.
+<m2.png, id=43, 235.63031pt x 382.42876pt>
+File: m2.png Graphic file (type png)
+<use m2.png>
+Package pdftex.def Info: m2.png  used on input line 186.
+(pdftex.def)             Requested size: 235.62973pt x 382.42781pt.
+<m3.png, id=44, 226.59656pt x 426.84468pt>
+File: m3.png Graphic file (type png)
+<use m3.png>
+Package pdftex.def Info: m3.png  used on input line 188.
+(pdftex.def)             Requested size: 226.596pt x 426.84364pt.
+ [10 <./m1.png (PNG copy)>] [11 <./m2.png (PNG copy)>] [12 <./m3.png (PNG copy)>] [13]
+Overfull \hbox (4.80502pt too wide) in paragraph at lines 281--282
+[]\OT1/cmr/m/n/10 A lo largo de un pe-ri-odo de nueve ho-ras, se reg-is-traron pa-trones de movimiento
+ []
+
+[14] [15] [16] [17] (build/Reporte Técnico.aux) ) 
+Here is how much of TeX's memory you used:
+ 1332 strings out of 480144
+ 22142 string characters out of 5893198
+ 314544 words of memory out of 5000000
+ 19325 multiletter control sequences out of 15000+600000
+ 471419 words of font info for 35 fonts, out of 8000000 for 9000
+ 62 hyphenation exceptions out of 8191
+ 55i,6n,62p,1265b,171s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/diani/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on "build/Reporte Técnico.pdf" (18 pages, 193881 bytes).
+PDF statistics:
+ 101 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+
