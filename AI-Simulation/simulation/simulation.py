@@ -84,7 +84,7 @@ class Simulation:
 
                     for passenger in bus.people:
 
-                        if passenger.desired_destiny == node.value or passenger.temporal_destiny == node.value:
+                        if passenger.desired_destiny == node.value or passenger.temporal_destiny.value == node.value:
                             eliminated_people.append(passenger)
                             passenger.current_state = "making_stay"
                             passenger.current_location = node.value

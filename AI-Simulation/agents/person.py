@@ -228,7 +228,8 @@ class Busy_Person(Person):
     def decide(self):
         if(self.obs_time % 24 == self.start_time - 1):
             self.desired_destiny = self.interest_place
-            self.move()
+            if self.desired_destiny != self.current_location:
+                self.move()
         elif(self.obs_time % 24 > self.start_time and self.obs_time % 24 < self.end_time):
             return
         else:
