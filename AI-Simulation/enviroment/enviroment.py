@@ -23,13 +23,3 @@ class Enviroment():
         env.busses=self.busses.copy()
 
         return env
-                    
-        
-    # def extract_bus_states(self,graph):
-
-    #     bus_states = []
-
-    #     for node in graph.nodes:
-    #         bus_states.append(node.bus_state)
-
-    #     return bus_states

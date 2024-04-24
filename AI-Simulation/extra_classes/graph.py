@@ -99,18 +99,3 @@ class Bus_Stop(Node):
         
     def add_gazelles(self, gazelle):
         self.gazelles.append(gazelle)
-        
-    def add_people_waiting(self, person, bus, is_bus = True):
-        pass
-    
-    def add_people_around(self, person):
-        pass
-    
-    def drop_people_waiting(self, person, bus, is_bus = True):
-        pass
-    
-    def change_people_waiting(self, person, actual_bus, new_bus, actual_is_bus = True, new_is_bus = True):
-        pass
-    
-    def drop_people_around(self, person):
-        pass

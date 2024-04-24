@@ -2,7 +2,7 @@ import random
 import sys
 sys.path.append('../AI-Simulation')
 from agents.person import *
-from data.bus_data import *  ######
+from data.bus_data import * 
 from enviroment.enviroment import *
 from pln.reporter import *
 
@@ -30,7 +30,7 @@ class Simulation:
         self.events = []
         self.places = []
         self.busses = []
-        self.bus_data = None #####
+        self.bus_data = None 
 
     def simulate(self, num_agents, num_iter):
         """Simulate the model.
@@ -59,7 +59,6 @@ class Simulation:
         self._ubicate_agents()
         self._create_busses()
         self._ubicate_busses()
-        #self._create_events()
 
     def _run(self, num_iter):
 
@@ -71,14 +70,14 @@ class Simulation:
 
             for node in self.graph.nodes:
 
-                for agent in node.people_around:####
+                for agent in node.people_around:
 
-                    agent.analize(enviroment)####
+                    agent.analize(enviroment)
                     agent.decide()
 
                 
                 temp_eliminated_busses = []
-                for bus in node.busses:####
+                for bus in node.busses:
 
                     eliminated_people = []
 
@@ -88,7 +87,7 @@ class Simulation:
                             eliminated_people.append(passenger)
                             passenger.current_state = "making_stay"
                             passenger.current_location = node.value
-                            node.people_around.append(passenger)#######
+                            node.people_around.append(passenger)
 
                     for passenger in eliminated_people:
                         bus.disembark_passenger(passenger)
@@ -98,14 +97,13 @@ class Simulation:
                     for agent in node.people_waiting[bus.name]:
                         if(bus.board_passenger(agent)):
 
-                            agent.current_state = "on_the_way" 
-                            # bus.board_passenger(agent)
+                            agent.current_state = "on_the_way"
                             embarked.append(agent)
                     
                     for agent in embarked:
-                        node.people_waiting[bus.name].remove(agent)########
+                        node.people_waiting[bus.name].remove(agent)
 
-                    removed=bus.move(self.graph) #####
+                    removed=bus.move(self.graph)
                     if(removed):
                         temp_eliminated_busses.append(bus)
 
@@ -122,8 +120,6 @@ class Simulation:
 
                 node.people_to_add=[]
 
-
-            ######
             j=0
             for nd in eliminated_busses:
                 for bus in nd:
@@ -131,11 +127,10 @@ class Simulation:
                     self.graph.nodes[bus.location].busses.append(bus)
                 j+=1
 
-            ######
 
             event=enviroment.clone()
 
-            self._create_events(i, event)####
+            self._create_events(i, event)
 
             enviroment.tick()
 
@@ -201,7 +196,7 @@ class Simulation:
         ids=0
         for i in self.bus_data:
 
-            rnd=random.randint(1,2) ######
+            rnd=random.randint(1,2) 
 
             for j in range(rnd):
                 rnd=random.randint(0,len(i['route'])-1)
@@ -219,7 +214,7 @@ class Simulation:
             None
         """
         for agent in self.agents:
-            self.graph.nodes[int(agent.home_dir)].people_around.append(agent) ####people waiting?
+            self.graph.nodes[int(agent.home_dir)].people_around.append(agent) 
 
     def _ubicate_busses(self):
         """Ubicate the busses.
@@ -244,7 +239,7 @@ class Simulation:
         """
 
         bus_data=read_json('bus_data')
-        self.bus_data = bus_data  #####
+        self.bus_data = bus_data  
         bus_stops_data=read_json('bus_stops_data')
         for stops in bus_stops_data:
             self.places.append(int(stops['id']))
@@ -267,8 +262,6 @@ class Simulation:
             count=0
             for que in env.people_waiting.values():
                 count+=len(que)
-                # for ppl in que:
-                #     count+=len(ppl)
             
             count+=len(env.people_around)
 
@@ -279,6 +272,4 @@ class Simulation:
             count=len(bus.people)
             text+=f"Habian {count} personas en un bus {bus.name}."
 
-        self.events.append(text)
-        # self.events.append(Event(num_event, enviroment))####
-        
+        self.events.append(text)    

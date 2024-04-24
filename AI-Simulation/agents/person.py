@@ -122,7 +122,6 @@ class Person():
             
     def get_in_line(self, transport):
 
-        #self.obs_buses[transport].append(self)  ##########
         self.current_state = "waiting"
         for bus_stop in self.obs_bus_stops:
             if(bus_stop.value == self.current_location):
@@ -181,7 +180,7 @@ class Person():
         if(self.obs_time % 24 >= self.curfew_start and self.obs_time % 24 < self.curfew_end):
             if(self.current_location != self.home_dir and self.desired_destiny != self.home_dir):
                 self.desired_destiny = self.home_dir
-                self.move() #######
+                self.move()
         elif(self.current_state == "making_stay"):
             if(self.desired_destiny == self.current_location):
                 action = choice(self.actions)
@@ -202,7 +201,7 @@ class Person():
                     self.waiting_bus = None
                     self.current_route = None
             else: 
-                self.move()##############
+                self.move()
         elif(self.current_state == "waiting"):
             actual_node = None
             for bus_stop in self.obs_bus_stops:
