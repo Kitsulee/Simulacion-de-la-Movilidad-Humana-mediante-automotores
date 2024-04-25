@@ -14,8 +14,7 @@ class Person():
         budget (float): The person's available budget.
         curfew_start (int): The time (in hours within a 24-hour cycle) when the person's curfew starts.
         curfew_end (int): The time (in hours within a 24-hour cycle) when the person's curfew ends.
-        visited_dir (dict): A dictionary storing visited routes, keyed by tuples of (current_location, goal).
-            Values are the corresponding routes.
+        visited_dir (dict): A dictionary storing visited routes, keyed by tuples of (current_location, goal). Values are the corresponding routes.
         current_location (str): The person's current location.
         desired_destiny (str, optional): The person's desired destination, if any.
         states (list): List of possible states the person can be in.
@@ -216,7 +215,15 @@ class Person():
         
 
 class Busy_Person(Person):
+    """
+     Represents a person with some routine, schedule and interest place.
 
+     Attributes:
+    interest_place: The place where the person must go.
+    start_time: The time when the person must go to the interest place.
+    end_time: The time when the person can leave.
+        
+     """
     def __init__(self, id, home_dir, budget,curfew_start,curfew_end, interest_place, start_time, end_time):
         super().__init__( id, home_dir, budget,curfew_start,curfew_end)
 
