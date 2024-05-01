@@ -1,5 +1,4 @@
 import google.generativeai as genai
-#from IPython.display import Markdown
 
 class GeminiClient:
     def __init__(self):

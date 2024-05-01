@@ -14,8 +14,7 @@ class Person():
         budget (float): The person's available budget.
         curfew_start (int): The time (in hours within a 24-hour cycle) when the person's curfew starts.
         curfew_end (int): The time (in hours within a 24-hour cycle) when the person's curfew ends.
-        visited_dir (dict): A dictionary storing visited routes, keyed by tuples of (current_location, goal).
-            Values are the corresponding routes.
+        visited_dir (dict): A dictionary storing visited routes, keyed by tuples of (current_location, goal). Values are the corresponding routes.
         current_location (str): The person's current location.
         desired_destiny (str, optional): The person's desired destination, if any.
         states (list): List of possible states the person can be in.
@@ -31,6 +30,7 @@ class Person():
         self.visited_dir  = {}
         self.current_location = home_dir
         self.desired_destiny = home_dir
+        self.temporal_destiny = home_dir
         self.states = ["waiting", "on_the_way", "making_stay"]
         self.current_state = "making_stay"
         self.actions = ["move", "stay", "return_home"]
@@ -82,15 +82,17 @@ class Person():
         pondered_nodes = {}
         for bus, value in buses_node_time.items():
             node, index_on_route, time_to_arrive = value
-            pondered_nodes[bus] = index_on_route - time_to_arrive
+            pondered_nodes[bus] = (index_on_route - time_to_arrive, node)
             
-        sorted_pondered_nodes = dict(sorted(pondered_nodes.items(), key=lambda item:item[1], reverse=True))
+        sorted_pondered_nodes = dict(sorted(pondered_nodes.items(), key=lambda item:item[1][0], reverse=True))
         return sorted_pondered_nodes
     
     def choose_at_convenience(self, farthest_nodes):
         buses_node_time = self.calculate_busses_time(farthest_nodes)
         sorted_pondered_nodes = self.ponder_time_distance(buses_node_time)
+        self.temporal_destiny = list(sorted_pondered_nodes.values())[0][1]
         selected_bus = list(sorted_pondered_nodes.keys())[0] 
+        
         return selected_bus
             
     def choose_transportation(self, route):
@@ -119,7 +121,6 @@ class Person():
             
     def get_in_line(self, transport):
 
-        #self.obs_buses[transport].append(self)  ##########
         self.current_state = "waiting"
         for bus_stop in self.obs_bus_stops:
             if(bus_stop.value == self.current_location):
@@ -178,7 +179,7 @@ class Person():
         if(self.obs_time % 24 >= self.curfew_start and self.obs_time % 24 < self.curfew_end):
             if(self.current_location != self.home_dir and self.desired_destiny != self.home_dir):
                 self.desired_destiny = self.home_dir
-                self.move() ########
+                self.move()
         elif(self.current_state == "making_stay"):
             if(self.desired_destiny == self.current_location):
                 action = choice(self.actions)
@@ -199,7 +200,7 @@ class Person():
                     self.waiting_bus = None
                     self.current_route = None
             else: 
-                self.move()##############
+                self.move()
         elif(self.current_state == "waiting"):
             actual_node = None
             for bus_stop in self.obs_bus_stops:
@@ -214,7 +215,15 @@ class Person():
         
 
 class Busy_Person(Person):
+    """
+     Represents a person with some routine, schedule and interest place.
 
+     Attributes:
+    interest_place: The place where the person must go.
+    start_time: The time when the person must go to the interest place.
+    end_time: The time when the person can leave.
+        
+     """
     def __init__(self, id, home_dir, budget,curfew_start,curfew_end, interest_place, start_time, end_time):
         super().__init__( id, home_dir, budget,curfew_start,curfew_end)
 
@@ -225,7 +234,8 @@ class Busy_Person(Person):
     def decide(self):
         if(self.obs_time % 24 == self.start_time - 1):
             self.desired_destiny = self.interest_place
-            self.move()
+            if self.desired_destiny != self.current_location:
+                self.move()
         elif(self.obs_time % 24 > self.start_time and self.obs_time % 24 < self.end_time):
             return
         else:
