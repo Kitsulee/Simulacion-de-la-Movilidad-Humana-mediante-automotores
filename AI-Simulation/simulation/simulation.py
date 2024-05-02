@@ -30,7 +30,10 @@ class Simulation:
         self.events = []
         self.places = []
         self.busses = []
-        self.bus_data = None 
+        self.bus_data = None
+        self.stadistics={}
+        self.stadistics_busses={}
+        self.places_names = []
 
     def simulate(self, num_agents, num_iter):
         """Simulate the model.
@@ -144,7 +147,7 @@ class Simulation:
             None
         """
 
-        reporter=Reporter(self.events)
+        reporter=Reporter(self.events,self.stadistics,self.stadistics_busses)
         reporter.report()
 
     def _create_agents(self, num_agents):
@@ -243,6 +246,7 @@ class Simulation:
         bus_stops_data=read_json('bus_stops_data')
         for stops in bus_stops_data:
             self.places.append(int(stops['id']))
+            self.places_names.append(stops['municipality'])
         graph = create_graph(bus_data, bus_stops_data)
         self.graph = graph
 
@@ -265,11 +269,24 @@ class Simulation:
             
             count+=len(env.people_around)
 
+            if(self.stadistics.get(env.municipality)==None):
+                self.stadistics[env.municipality]=count
+
+            else:
+                self.stadistics[env.municipality]+=count
+
             text+=f"Habian {count} personas en la parada de buses de {env.municipality}."
 
         for bus in enviroment.busses:
 
             count=len(bus.people)
+
+            if(self.stadistics_busses.get(bus.name)==None):
+                self.stadistics_busses[bus.name]=count
+
+            else:
+                self.stadistics_busses[bus.name]+=count
+
             text+=f"Habian {count} personas en un bus {bus.name}."
 
         self.events.append(text)    
